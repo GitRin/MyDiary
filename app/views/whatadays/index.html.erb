@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Whatadays</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>When</th>
+      <th>How</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @whatadays.each do |whataday| %>
+      <tr>
+        <td><%= whataday.when %></td>
+        <td><%= whataday.how %></td>
+        <td><%= link_to 'Show', whataday %></td>
+        <td><%= link_to 'Edit', edit_whataday_path(whataday) %></td>
+        <td><%= link_to 'Destroy', whataday, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Whataday', new_whataday_path %>

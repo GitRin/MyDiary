@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>When:</strong>
+  <%= @whataday.when %>
+</p>
+
+<p>
+  <strong>How:</strong>
+  <%= @whataday.how %>
+</p>
+
+<%= link_to 'Edit', edit_whataday_path(@whataday) %> |
+<%= link_to 'Back', whatadays_path %>
